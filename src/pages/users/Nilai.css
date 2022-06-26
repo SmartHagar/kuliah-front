@@ -1,0 +1,15 @@
+/** @format */
+.table.w-full table {
+  overflow: auto;
+}
+thead th {
+  position: sticky;
+  top: 4rem;
+  background: white;
+}
+
+tbody tr td:first-child {
+  /* sticky */
+  position: sticky;
+  left: 0;
+}

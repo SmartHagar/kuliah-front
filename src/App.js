@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <IndexUser />
-      <div className="md:container m-auto">
+      <div className="container mx-auto md:mt-24 mt-10">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path=":id" element={<Nilai />} />

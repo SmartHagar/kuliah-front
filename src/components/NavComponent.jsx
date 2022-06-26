@@ -28,7 +28,7 @@ const NavComponent = ({ loading, li }) => {
 
   return (
     <div>
-      <div className="hidden md:navbar md:bg-base-100 md:shadow-lg md:mb-3 md:flex md:justify-center">
+      <div className="fixed top-0 z-50 hidden md:navbar md:bg-base-100 md:shadow-lg md:mb-3 md:flex md:justify-center">
         <div className="">
           <ul className="menu menu-horizontal p-0">
             {navItems()}
@@ -44,7 +44,7 @@ const NavComponent = ({ loading, li }) => {
       <div className="md:hidden">
         <div className="flex justify-end">
           <button
-            className="btn btn-square btn-ghost order-last"
+            className="btn btn-square btn-ghost order-last fixed top-0 z-50"
             onClick={handleMenu}
           >
             <svg
@@ -64,7 +64,7 @@ const NavComponent = ({ loading, li }) => {
           <ul
             className={
               menuMobile
-                ? "menu bg-base-100 shadow-lg w-full border rounded-box my-4"
+                ? "menu bg-base-100 shadow-lg w-full border rounded-box my-0 fixed top-0 left-0 z-40"
                 : "hidden"
             }
           >

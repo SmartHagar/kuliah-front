@@ -31,14 +31,14 @@ const Nilai = () => {
         Daftar Nilai Mata Kuliah{" "}
         {loading ? "..." : penilaian[0].subject.subject_nm}
       </h1>
-      <div className="overflow-x-auto">
-        {loading ? (
-          <div className="text-center">
-            <div className="spinner-border text-primary" role="status">
-              <span className="sr-only">Loading...</span>
-            </div>
+      {loading ? (
+        <div className="text-center">
+          <div className="spinner-border text-primary" role="status">
+            <span className="sr-only">Loading...</span>
           </div>
-        ) : (
+        </div>
+      ) : (
+        <div className="overflow-x-auto">
           <table className="table w-full">
             <thead>
               <tr>
@@ -62,9 +62,19 @@ const Nilai = () => {
                 </tr>
               ))}
             </tbody>
+            <tfoot>
+              <tr>
+                <th>NPM</th>
+                <th>Nama</th>
+                <th>UTS</th>
+                <th>UAS</th>
+                <th>Total</th>
+                <th>Predikat</th>
+              </tr>
+            </tfoot>
           </table>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
